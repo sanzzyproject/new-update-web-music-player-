@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>MyMusic</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="app-container">
+        <header class="top-bar">
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" id="searchInput" placeholder="Mau dengerin apa?">
+            </div>
+        </header>
+
+        <main id="mainContent">
+            <h2 id="sectionTitle">Rekomendasi Untukmu</h2>
+            <div class="loader" id="loader"></div>
+            <div class="song-grid" id="songList">
+                </div>
+        </main>
+
+        <div class="player-bar" id="playerBar">
+            <div class="player-info">
+                <img src="https://placehold.co/50" id="p-img" alt="">
+                <div class="p-text">
+                    <h4 id="p-title">Pilih Lagu</h4>
+                    <p id="p-artist">-</p>
+                </div>
+            </div>
+            
+            <div class="player-controls">
+                <button id="btnPrev"><i class="fas fa-step-backward"></i></button>
+                <button id="btnPlay" class="play-btn"><i class="fas fa-play"></i></button>
+                <button id="btnNext"><i class="fas fa-step-forward"></i></button>
+            </div>
+
+            <audio id="audioPlayer"></audio>
+        </div>
+        
+        <div class="progress-container" id="progressContainer">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+
+        <nav class="bottom-nav">
+            <a href="#" class="active" onclick="loadHome()"><i class="fas fa-home"></i><span>Home</span></a>
+            <a href="#"><i class="fas fa-search"></i><span>Cari</span></a>
+            <a href="#"><i class="fas fa-book"></i><span>Koleksi</span></a>
+        </nav>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
